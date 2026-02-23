@@ -1,0 +1,352 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #38bdf8;
+  --primary-dark: #0ea5e9;
+  --bg-dark: #0f172a;
+  --bg-card: #1e293b;
+  --text-light: #f1f5f9;
+  --text-muted: #94a3b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-light);
+  scroll-behavior: smooth;
+  line-height: 1.6;
+   padding-top: 80px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 60px;
+  font-weight: 600;
+}
+
+.section-title span {
+  color: var(--primary);
+}
+
+/* ================= HEADER ================= */
+
+
+  .header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 80px;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: 0.3s ease;
+}
+
+
+.nav-bar {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 18px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===== Brand Name ===== */
+.brand a {
+  text-decoration: none;   /* removes underline */
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.brand a span {
+  color: var(--primary);
+}
+
+.brand a:hover {
+  color: var(--primary);
+}
+
+/* ===== Nav Links ===== */
+.nav-list ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+/* Smooth underline animation */
+.nav-list a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: var(--primary);
+  transition: 0.3s ease;
+}
+
+.nav-list a:hover {
+  color: var(--primary);
+}
+
+.nav-list a:hover::after {
+  width: 100%;
+}
+/* ================= HERO ================= */
+#hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  color: var(--text-muted);
+  margin: 15px 0;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 14px 30px;
+  border-radius: 30px;
+  background: var(--primary);
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.cta:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
+}
+
+/* ================= SERVICES ================= */
+.service-bottom {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.service-item {
+  background: var(--bg-card);
+  padding: 30px;
+  border-radius: 15px;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.service-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.service-item h2 {
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+
+/* ================= PROJECTS ================= */
+.project-item {
+  background: var(--bg-card);
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  transition: 0.3s ease;
+}
+
+.project-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.project-item h2 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.project-item h4 {
+  margin-top: 15px;
+  color: var(--text-muted);
+}
+
+/* ================= ABOUT ================= */
+#about p {
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+}
+
+/* =================  CONTACT ================= */
+/* ================= CONTACT SECTION ================= */
+.contact-section {
+  padding: 100px 0;
+}
+
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 60px;
+  align-items: center;
+}
+
+.contact-info {
+  padding: 40px;
+}
+
+.contact-info h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: var(--primary);
+}
+
+.contact-info p {
+  color: var(--text-muted);
+  margin-bottom: 25px;
+}
+
+.info-item {
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+}
+
+/* ================= FORM ================= */
+.contact-form {
+  background: rgba(30, 41, 59, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Floating label style */
+.form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: transparent;
+  color: white;
+  outline: none;
+}
+
+.form-group label {
+  position: absolute;
+  top: 14px;
+  left: 15px;
+  color: var(--text-muted);
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.form-group input:focus + label,
+.form-group input:valid + label,
+.form-group textarea:focus + label,
+.form-group textarea:valid + label {
+  top: -10px;
+  left: 10px;
+  font-size: 0.75rem;
+  color: var(--primary);
+  background: var(--bg-dark);
+  padding: 0 5px;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 120px;
+}
+
+.send-btn {
+  width: 100%;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.send-btn:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
+}
+
+/* ================= FOOTER ================= */
+#footer {
+  background: #0b1220;
+  text-align: center;
+  padding: 40px 0;
+  margin-top: 60px;
+}
+
+#footer p {
+  color: var(--text-muted);
+}
+
+#footer span {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .nav-list ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .container {
+    padding: 60px 0;
+  }
+}
